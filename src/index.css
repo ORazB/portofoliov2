@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+:root {
+	--primary: oklch(0.6053 0.2 298.59);
+}
+
+@theme {
+	--font-sans: "Google Sans Flex Variable", ui-sans-serif, system-ui, sans-serif;
+	--font-serif: "Instrument Serif", ui-serif, Georgia, serif;
+
+	--color-primary: var(--primary);
+}
+
+@keyframes terminal-blink {
+	0%, 49% {
+		opacity: 1;
+	}
+	50%, 100% {
+		opacity: 0;
+	}
+}
+
+.animate-cursor-blink {
+	animation: terminal-blink 1s steps(2, start) infinite;
+}
+
+body {
+	background-color: oklch(0.1156 0.0032 285.88);
+}
