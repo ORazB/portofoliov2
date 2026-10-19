@@ -1,6 +1,7 @@
 import { Header } from "./components/header";
 import { ProjectCarousel } from "./components/project-carousel";
 import { FindMeOn } from "./components/find-me-on";
+import { Skills } from "./components/skills";
 import type { ProjectItem } from "./components/project-card";
 import profile from "./assets/profile.png";
 
@@ -119,6 +120,10 @@ function App() {
 							The languages, frameworks, and tools I use to turn ideas into
 							functional, well crafted software.
 						</h2>
+					</div>
+
+					<div className="mt-12">
+						<Skills />
 					</div>
 				</div>
 			</section>
