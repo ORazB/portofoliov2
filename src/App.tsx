@@ -57,7 +57,7 @@ function App() {
 		<>
 			<Header />
 			{/*opening*/}
-			<section className="w-full h-full mt-24">
+			<section id="about" className="w-full h-full mt-24">
 				<div className="w-6xl max-w-full mx-auto px-4 grid place-items-center grid-cols-2 gap-8">
 					{/*text*/}
 					<div className="grid gap-4">

@@ -13,9 +13,9 @@ export interface HeaderProps {
 }
 
 const DEFAULT_NAV_LINKS: NavLinkItem[] = [
-	{ label: "about", href: "about" },
-	{ label: "projects", href: "projects" },
-	{ label: "contact", href: "contact" },
+	{ label: "about", href: "#about" },
+	{ label: "projects", href: "#projects" },
+	{ label: "contact", href: "#contact" },
 ];
 
 export function Header({
