@@ -79,10 +79,42 @@ function App() {
 						<div className="flex items-center justify-center gap-6 mt-4 flex-wrap lg:justify-start">
 							{/*social media*/}
 							<div className="flex items-center gap-4">
-								<Github className="text-white hover:text-primary transition-colors duration-150 cursor-pointer" />
-								<Linkedin className="text-white hover:text-primary transition-colors duration-150 cursor-pointer" />
-								<TwitterX className="text-white hover:text-primary transition-colors duration-150 cursor-pointer" />
-								<DiscordAlt className="text-white hover:text-primary transition-colors duration-150 cursor-pointer" />
+								<a
+									href="https://github.com/ORazB"
+									target="_blank"
+									rel="noreferrer"
+									aria-label="GitHub"
+									className="text-white hover:text-primary transition-colors duration-150 cursor-pointer"
+								>
+									<Github />
+								</a>
+								<a
+									href="https://www.linkedin.com/in/i-gede-devandra-mahottama-9b16003a5/"
+									target="_blank"
+									rel="noreferrer"
+									aria-label="LinkedIn"
+									className="text-white hover:text-primary transition-colors duration-150 cursor-pointer"
+								>
+									<Linkedin />
+								</a>
+								<a
+									href="https://x.com/zyrobol98791"
+									target="_blank"
+									rel="noreferrer"
+									aria-label="Twitter"
+									className="text-white hover:text-primary transition-colors duration-150 cursor-pointer"
+								>
+									<TwitterX />
+								</a>
+								<a
+									href="https://discord.com/users/690490452583120896"
+									target="_blank"
+									rel="noreferrer"
+									aria-label="Discord"
+									className="text-white hover:text-primary transition-colors duration-150 cursor-pointer"
+								>
+									<DiscordAlt />
+								</a>
 							</div>
 							{/*resume*/}
 							<div className="flex items-center gap-3">
