@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export interface NavLinkItem {
 	label: string;
@@ -25,8 +25,18 @@ export function Header({
 }: HeaderProps) {
 	const [activePath, setActivePath] = useState(initialPath);
 	const [hoveredPath, setHoveredPath] = useState<string | null>(null);
+	const [isScrolled, setIsScrolled] = useState(false);
 
 	const displayedPath = hoveredPath !== null ? hoveredPath : activePath;
+
+	useEffect(() => {
+		const handleScroll = () => setIsScrolled(window.scrollY > 8);
+
+		handleScroll();
+		window.addEventListener("scroll", handleScroll, { passive: true });
+
+		return () => window.removeEventListener("scroll", handleScroll);
+	}, []);
 
 	const handleNavClick = (item: NavLinkItem) => {
 		const cleanPath = item.label.replace(/\.+$/, "");
@@ -44,7 +54,13 @@ export function Header({
 	};
 
 	return (
-		<header className="w-full py-6 select-none">
+		<header
+			className={`sticky top-0 z-50 w-full select-none py-8 transition-all duration-300 ${
+				isScrolled
+					? "bg-[#141416]/70 backdrop-blur-xl border-b border-white/10 shadow-[0_8px_30px_rgba(0,0,0,0.35)]"
+					: "bg-transparent border-b border-transparent"
+			}`}
+		>
 			<div className="w-6xl max-w-full mx-auto px-4 flex items-center justify-between font-mono text-sm">
 				<a
 					href="/"
