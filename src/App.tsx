@@ -56,24 +56,27 @@ function App() {
 	return (
 		<>
 			<Header />
-			{/*opening*/}
-			<section id="about" className="w-full h-full mt-24 scroll-mt-24">
-				<div className="w-6xl max-w-full mx-auto px-4 grid place-items-center grid-cols-2 gap-8">
+			{/*hero*/}
+			<section id="about" className="w-full mt-16 scroll-mt-24 sm:mt-20 lg:mt-24">
+				<div className="w-6xl max-w-full mx-auto px-4 grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-8">
 					{/*text*/}
-					<div className="grid gap-4">
-						<h1 className="text-white text-7xl tracking-wide font-serif">
-							Hi, I'm <span className="text-primary">Devandra Mahottama</span>{" "}
-							<span className="text-gray-500 absolute text-xl pt-10 pl-4 font-serif">
+					<div className="grid gap-4 text-center lg:text-left">
+						<div className="grid gap-2">
+							<h1 className="text-white text-4xl leading-[1.05] tracking-wide font-serif sm:text-5xl md:text-6xl lg:text-7xl">
+								Hi, I'm{" "}
+								<span className="text-primary">Devandra Mahottama</span>
+							</h1>
+							<p className="text-gray-500 text-lg font-serif sm:text-xl">
 								aka. "Kyouka"/"Keita" online
-							</span>
-						</h1>
-						<h1 className="text-white font-sans tracking-wide text-xl">
+							</p>
+						</div>
+						<p className="text-white font-sans tracking-wide text-base sm:text-lg md:text-xl">
 							I'm an 18 year old from Indonesia who makes web apps, software,
 							play games and is passionate about learning new things.
-						</h1>
+						</p>
 
 						{/*social media & resume*/}
-						<div className="flex items-center gap-6 mt-4 flex-wrap">
+						<div className="flex items-center justify-center gap-6 mt-4 flex-wrap lg:justify-start">
 							{/*social media*/}
 							<div className="flex items-center gap-4">
 								<Github className="text-white hover:text-primary transition-colors duration-150 cursor-pointer" />
@@ -100,7 +103,7 @@ function App() {
 					{/*profile*/}
 					<div className="grid place-items-center">
 						<img
-							className="w-[85%] h-full rounded-full object-cover"
+							className="w-56 max-w-full aspect-square rounded-full object-cover sm:w-72 lg:w-[85%]"
 							src={profile}
 							alt="Devandra Mahottama"
 						/>
